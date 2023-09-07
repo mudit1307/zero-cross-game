@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Cross</title>
+    <link rel="shortcut icon" href="./icons8-tic-tac-toe-40.png" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> -->
+    
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(purple, #6c5ce7);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.box-outer{
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.head h2 {
+    color: white;
+    letter-spacing: 6px;
+    font-size: 28px;
+}
+
+.dummy
+{
+    display:flex;  
+    margin: 20px 0px 60px;
+
+}
+
+.display-output,
+.info{
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    /* width: 100%; */
+}
+
+
+.display-output {
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 40px;
+    margin: auto;
+    padding: 2px 10px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    display: flex;
+}
+
+
+.display-output input {
+    font-size: 22px;
+    color: yellow;
+    font-weight: 800;
+    background-color: transparent;
+    width: 150px;
+
+    /* to remove input-box border highlight  */
+    border: none;
+    outline: none;
+}
+
+
+
+/* .board {
+    width: 100%; 
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 25px 20px;
+    display: flex;
+}
+
+.line
+{
+    height: 100px;
+}
+
+.one div,.two div
+{
+    border-right: 1px solid white;
+    width: 130px;
+    height: 100%;
+} */
+
+.board
+{
+    padding: 25px;
+}
+
+.one,.two,.three{
+    height: 100px;
+    display: flex;
+    width: 100%;
+}
+.block
+{
+    width: 100px;
+    padding: 20px;
+}
+
+.block img 
+{
+height: 60px;
+width: 60px;
+}
+
+
+
+
+
+
+</style>
+
+
+<body>
+    <div class="wrapper">
+        <div class="box-outer">
+            <div class="head">
+                <h2>ZERO-CROSS </h2>
+            </div>
+            
+            <div class="dummy">
+                <div class="display-output move">
+                    <input readonly type="text" id="move-turn">
+                </div>
+            </div>
+
+            <div class="board info">
+            <div class="line one"> 
+                <div class="block one-1"></div>
+                <hr>
+                <div class="block one-2"></div>
+                <hr>
+                <div class="block one-3"></div>
+            </div>
+            <hr>
+            <div class="line two">
+                <div class="block two-1"></div>
+                <hr>
+                <div class="block two-2 "></div>
+                <hr>
+                <div class="block two-3 "></div>
+            </div>
+            <hr>
+            <div class="line three">
+                <div class="block three-1 "></div>
+                <hr>
+                <div class="block three-2 "></div>
+                <hr>
+                <div class="block three-3 "></div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    let move_turn=document.querySelector("#move-turn");
+    let blocks=document.querySelectorAll(".block");
+    // let blocks_images=document.querySelectorAll(".block img");
+    
+    // [zero-image , cross-image]
+    let zcImages=["icons8-o-67.png","icons8-cross-100.png"];
+    let move=0;
+
+    move_turn.value="First Move - O";
+
+    for(let i=0;i<blocks.length;i++)
+    {
+        blocks[i].onclick = () =>
+        {
+            console.log("click "+ i);
+            let img_ele=document.createElement("img");
+            img_ele.src=zcImages[(move%2==0)? 0:1];
+            move++;
+            let ele=document.createElement("div");
+            ele.appendChild(img_ele);
+            blocks[i].innerHTML="";
+            blocks[i].appendChild(ele);
+            disableBtn(i);
+            // checkWinning(i);
+        }
+    }
+    function disableBtn(i)
+    {
+            // for(let i=0;i<blocks.length;i++)
+            // {
+                // blocks.disabled="true";
+                blocks[i].onclick=null;
+            // }
+    }
+    let mask = [[null,null,null],[null,null,null],[null,null,null]];
+
+    // function checkWinning(i)
+    // {
+        
+    // }
+
+
+</script>
+
+
+
+</html>
