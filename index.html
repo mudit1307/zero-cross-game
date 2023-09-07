@@ -7,82 +7,81 @@
     <title>Zero Cross</title>
     <link rel="shortcut icon" href="./icons8-tic-tac-toe-40.png" type="image/x-icon">
     <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> -->
-    
+
 
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
 
-.wrapper {
-    height: 100vh;
-    display: flex;
-    background: linear-gradient(purple, #6c5ce7);
-    font-family: sans-serif;
-    font-size: 16px;
-}
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        background: linear-gradient(purple, #6c5ce7);
+        font-family: sans-serif;
+        font-size: 16px;
+    }
 
-.box-outer{
-    width: auto;
-    height: auto;
-    margin: auto;
-    text-align: center;
-}
+    .box-outer {
+        width: auto;
+        height: auto;
+        margin: auto;
+        text-align: center;
+    }
 
-.head h2 {
-    color: white;
-    letter-spacing: 6px;
-    font-size: 28px;
-}
+    .head h2 {
+        color: white;
+        letter-spacing: 6px;
+        font-size: 28px;
+    }
 
-.dummy
-{
-    display:flex;  
-    margin: 20px 0px 60px;
+    .dummy {
+        display: flex;
+        margin: 20px 0px 60px;
 
-}
+    }
 
-.display-output,
-.info{
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    /* width: 100%; */
-}
-
-
-.display-output {
-    background-color: rgba(0, 0, 0, 0.15);
-    height: 40px;
-    margin: auto;
-    padding: 2px 10px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    display: flex;
-}
+    .display-output,
+    .info {
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        /* width: 100%; */
+    }
 
 
-.display-output input {
-    font-size: 22px;
-    color: yellow;
-    font-weight: 800;
-    background-color: transparent;
-    width: 150px;
-
-    /* to remove input-box border highlight  */
-    border: none;
-    outline: none;
-}
-
+    .display-output {
+        background-color: rgba(0, 0, 0, 0.15);
+        height: 40px;
+        margin: auto;
+        padding: 2px 10px;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        display: flex;
+    }
 
 
-/* .board {
+    .display-output input {
+        font-size: 22px;
+        color: yellow;
+        font-weight: 800;
+        background-color: transparent;
+        width: 150px;
+
+        /* to remove input-box border highlight  */
+        border: none;
+        outline: none;
+    }
+
+
+
+    /* .board {
     width: 100%; 
     height: 350px;
     background-color: rgba(0, 0, 0, 0.15);
@@ -102,33 +101,27 @@
     height: 100%;
 } */
 
-.board
-{
-    padding: 25px;
-}
+    .board {
+        padding: 25px;
+    }
 
-.one,.two,.three{
-    height: 100px;
-    display: flex;
-    width: 100%;
-}
-.block
-{
-    width: 100px;
-    padding: 20px;
-}
+    .one,
+    .two,
+    .three {
+        height: 100px;
+        display: flex;
+        width: 100%;
+    }
 
-.block img 
-{
-height: 60px;
-width: 60px;
-}
+    .block {
+        width: 100px;
+        padding: 20px;
+    }
 
-
-
-
-
-
+    .block img {
+        height: 60px;
+        width: 60px;
+    }
 </style>
 
 
@@ -138,7 +131,7 @@ width: 60px;
             <div class="head">
                 <h2>ZERO-CROSS </h2>
             </div>
-            
+
             <div class="dummy">
                 <div class="display-output move">
                     <input readonly type="text" id="move-turn">
@@ -146,29 +139,29 @@ width: 60px;
             </div>
 
             <div class="board info">
-            <div class="line one"> 
-                <div class="block one-1"></div>
+                <div class="line one">
+                    <div class="block one-1"></div>
+                    <hr>
+                    <div class="block one-2"></div>
+                    <hr>
+                    <div class="block one-3"></div>
+                </div>
                 <hr>
-                <div class="block one-2"></div>
+                <div class="line two">
+                    <div class="block two-1"></div>
+                    <hr>
+                    <div class="block two-2 "></div>
+                    <hr>
+                    <div class="block two-3 "></div>
+                </div>
                 <hr>
-                <div class="block one-3"></div>
-            </div>
-            <hr>
-            <div class="line two">
-                <div class="block two-1"></div>
-                <hr>
-                <div class="block two-2 "></div>
-                <hr>
-                <div class="block two-3 "></div>
-            </div>
-            <hr>
-            <div class="line three">
-                <div class="block three-1 "></div>
-                <hr>
-                <div class="block three-2 "></div>
-                <hr>
-                <div class="block three-3 "></div>
-            </div>
+                <div class="line three">
+                    <div class="block three-1 "></div>
+                    <hr>
+                    <div class="block three-2 "></div>
+                    <hr>
+                    <div class="block three-3 "></div>
+                </div>
 
             </div>
         </div>
@@ -177,46 +170,95 @@ width: 60px;
 
 
 <script>
-    let move_turn=document.querySelector("#move-turn");
-    let blocks=document.querySelectorAll(".block");
+    let move_turn = document.querySelector("#move-turn");
+    let blocks = document.querySelectorAll(".block");
     // let blocks_images=document.querySelectorAll(".block img");
-    
+
     // [zero-image , cross-image]
-    let zcImages=["icons8-o-67.png","icons8-cross-100.png"];
-    let move=0;
+    let zcImages = ["icons8-o-67.png", "icons8-cross-100.png"];
+    let move = 0;
 
-    move_turn.value="First Move - O";
+    move_turn.value = "First Move - O";
 
-    for(let i=0;i<blocks.length;i++)
-    {
-        blocks[i].onclick = () =>
-        {
-            console.log("click "+ i);
-            let img_ele=document.createElement("img");
-            img_ele.src=zcImages[(move%2==0)? 0:1];
-            move++;
-            let ele=document.createElement("div");
+    for (let i = 0; i < blocks.length; i++) {
+        blocks[i].onclick = () => {
+            console.log("click " + i);
+
+            let img_ele = document.createElement("img");
+            img_ele.src = zcImages[(move % 2 == 0) ? 0 : 1];
+
+            let ele = document.createElement("div");
             ele.appendChild(img_ele);
-            blocks[i].innerHTML="";
+            // blocks[i].innerHTML="";
             blocks[i].appendChild(ele);
+
             disableBtn(i);
-            // checkWinning(i);
+
+            let val = (move % 2 == 0) ? 0 : 1;
+            checkWinning(i, val);
+
+            move++;
         }
     }
-    function disableBtn(i)
-    {
-            // for(let i=0;i<blocks.length;i++)
-            // {
-                // blocks.disabled="true";
-                blocks[i].onclick=null;
-            // }
+    function disableBtn(i) {
+        // for(let i=0;i<blocks.length;i++)
+        // {
+        // blocks.disabled="true";
+        blocks[i].onclick = null;
+        // }
     }
-    let mask = [[null,null,null],[null,null,null],[null,null,null]];
+    let mask = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]];
 
-    // function checkWinning(i)
-    // {
-        
-    // }
+    function checkWinning(i, val) {
+        console.log(Math.floor(i / 3), i % 3, val);
+        mask[Math.floor(i / 3)][i % 3] = val;
+        if (move > 3) {
+            //search in row-col values
+            let rowSum = null, colSum = null;
+            for (let x = 0; x < 3; x++) {
+                // for(let y=0;y<mask[0].length;y++)
+                // {
+                //     rowSum+=mask[x][y];
+                //     colSum+=mask[y][x];
+                // }
+
+                console.log(rowSum, colSum);
+                if (mask[Math.floor(i / 3)][x] != -1) { rowSum += mask[Math.floor(i / 3)][x] } 
+                else { rowSum = null; break; };
+            }
+            for (let x = 0; x < 3; x++) {
+                console.log(rowSum, colSum);
+                if (mask[x][i%3] == -1) {
+                    colSum = null; break;
+                }
+                colSum += mask[x][i%3];
+            }
+            console.log(rowSum, colSum);
+
+
+            if (rowSum == 0) {
+                move_turn.value = "Wining - O";disableRemainingBtn();
+            }
+            else if (rowSum == 3) {
+                move_turn.value = "Wining - X";disableRemainingBtn();
+            }
+            else if (colSum == 0) {
+                move_turn.value = "Wining - O";disableRemainingBtn();
+            }
+            else if (colSum == 3) {
+                move_turn.value = "Wining - X";disableRemainingBtn();
+            }
+            rowSum = null, colSum = null;
+        }
+    }
+    function disableRemainingBtn()
+    {
+        console.log("game disabled");
+        for(let x=0;x<blocks.length;x++)
+        {
+            blocks[x].onclick=null;
+        }
+    }
 
 
 </script>
