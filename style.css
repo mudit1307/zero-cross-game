@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    background-color: #00FFCA;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.box-outer {
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.head h2 {
+    color: #27005D;
+    letter-spacing: 6px;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.dummy {
+    display: flex;
+    margin: 20px 0px 60px;
+}
+
+.display-output,
+.info {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+
+.display-output {
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 40px;
+    margin: auto;
+    padding: 2px 10px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    display: flex;
+}
+
+
+.display-output #move-turn {
+    font-size: 22px;
+    color: #9400FF;
+    background-color: transparent;
+
+
+    /* to remove input-box border highlight  */
+    /* border: none;
+        outline: none; */
+}
+
+.board {
+    padding: 25px;
+}
+
+.one,
+.two,
+.three {
+    height: 100px;
+    display: flex;
+    width: 100%;
+}
+
+.block {
+    width: 100px;
+    padding: 20px;
+}
+
+.block img {
+    height: 60px;
+    width: 60px;
+}
