@@ -31,11 +31,11 @@
 
 .dummy {
     display: flex;
-    margin: 20px 0px 60px;
+    margin: 20px 0px 30px;
 }
 
 .display-output,
-.info {
+.board ,#new-game-btn{
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
@@ -51,6 +51,7 @@
     color: white;
     display: flex;
 }
+
 
 
 .display-output #move-turn {
@@ -84,4 +85,20 @@
 .block img {
     height: 60px;
     width: 60px;
+}
+
+
+
+#new-game-btn
+{
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 40px 0px 0px;
+    padding: 2px 10px;
+    transition: 0.2s;
+}
+#new-game-btn:hover
+{
+    background-color: black;
 }

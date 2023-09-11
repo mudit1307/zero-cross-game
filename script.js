@@ -1,11 +1,16 @@
 let move_turn = document.querySelector("#move-turn");
 let blocks = document.querySelectorAll(".block");
+let new_game_btn=document.querySelector("#new-game-btn");
 
 // [zero-image , cross-image]
 let zcImages = ["icons8-o-67.png", "icons8-cross-100.png"];
 let move = 0;
 
 move_turn.textContent = "First Move - O";
+
+new_game_btn.onclick = () => {
+  location.reload();
+}
 
 for (let i = 0; i < blocks.length; i++) {
   blocks[i].onclick = () => {
