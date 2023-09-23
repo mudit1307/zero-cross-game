@@ -77,7 +77,7 @@ function checkWinning(i, val) {
       }
       colSum += mask[x][i % 3];
     }
-    console.log(rowSum, colSum);
+    // console.log(rowSum, colSum);
 
     //check diagonal sum
     let flagOne = 1,
@@ -120,7 +120,7 @@ function checkWinning(i, val) {
 }
 
 function disableRemainingBtn(winner) {
-  console.log("game disabled");
+  // console.log("game disabled");
 
   move_turn.textContent = `Winner - ${winner}`;
 
